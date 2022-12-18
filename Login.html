@@ -5,11 +5,133 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <style>
+         #head{
+            display: grid;
+            justify-content: center;
+            background-color: white;
+            height: 200px;
+            width: 100%;
+
+        }
+        #head img{
+            width: 200px;
+        }
+        #con{
+            margin-top: 50px;
+            width: 50%;
+            justify-content: space-between;
+            margin: auto;
+            border: 1px solid black;
+
+        }
+        #Sign{
+            display: block;
+            width: 500px;
+            justify-items: center;
+           margin-left: 160px;
+            
+         
+         
+        }
+        #body{
+            margin-left: 100px;
+            padding: 0px;
+        }
+        *{
+            margin: 4px;
+        }
+        #body input{
+            width: 300px;
+            
+            height: 30px;
+            border-radius: 5px;
+        }
+      #Signupbtn{
+            width: 300px;
+            height: 30px;
+            border-radius: 5px;
+            background-color: #3070F0;
+            border: 0px;
+            color: #F2F5FC;
+            font-size: 15px;
+           
+        }
+        #Signupbtn:hover{
+             background-color: darkblue;
+        }
+        #Submit{
+         width: 150px;
+         color: #F2F5FC;
+         background-color: #3070F0;
+         border-radius: 5px;
+         border: 0px;
+        }
+    </style>
 </head>
 <body>
 
-    <input type="email" placeholder="Email">
-    <input type="password" placeholder="Password">
+    <div id="con">
+        <div id="Sign">
+            <div id="head">
+                <img src="https://i.ibb.co/FsZrrYs/Time-Metric.jpg" alt="">
+                <p>Login into Time Metric</p>
+            </div>
+            <form id="signIn">
+
+               
+                
+                
+                <h4>Email</h4>
+                <input type="email" placeholder="johnsmith@mail.com" id="email" required>
+                <h4>Password</h4>
+                <input type="password" id="password" placeholder="Password" required>
+                
+                <br>
+                
+                <input type="Submit" id="Submit">
+                <br>
+                <div>
+                 
+                
+            </form>
+            
+           
+                
+               
+            
+           
+           
+
+        </div>
     
 </body>
 </html>
+<script>
+    let signIn=document.getElementById("signIn")
+    
+    signIn.addEventListener('submit',function(event){
+        event.preventDefault();
+        console.log("working")
+        let user = signIn.email.value;
+        let password = signIn.password.value;
+        
+        let storedUser = localStorage.getItem('user');
+        let storedPassword = localStorage.getItem('password');
+
+        if(user!= storedUser){
+            alert('user not found/registered!');
+        }
+        else{
+            if(password!=storedPassword){
+                alert('wrong password');
+            }
+            else{
+                alert('login successful');
+                window.location.assign("index.html")
+               
+            }
+        }
+      
+    })
+</script>

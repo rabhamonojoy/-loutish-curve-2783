@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
     <style>
@@ -13,40 +14,99 @@
             height: 200px;
 
         }
+        #head img{
+            width: 200px;
+        }
         #con{
             display: flex;
-            width: 80%;
+            width: 70%;
             justify-content: space-between;
             margin: auto;
+            border: 1px solid black;
 
         }
+        #Sign{
+            display: block;
+            width: 500px;
+            
+         
+         
+        }
+        #body{
+            margin-left: 100px;
+            padding: 0px;
+        }
+        *{
+            margin: 4px;
+        }
+        #body input{
+            width: 300px;
+            
+            height: 30px;
+            border-radius: 5px;
+        }
+      #Signupbtn{
+            width: 300px;
+            height: 30px;
+            border-radius: 5px;
+            background-color: #3070F0;
+            border: 0px;
+            color: #F2F5FC;
+            font-size: 15px;
+           
+        }
+        #Signupbtn:hover{
+             background-color: darkblue;
+        }
+        #google{
+            border: 1px solid black;
+        }
+       
+        #google img{
+            margin-bottom: 7px;
+          position: absolute;
+        }
+
     </style>
 </head>
 <body>
     <div id="con">
-        <div id="1">
+        <div id="Sign">
             <div id="head">
-                <img src="https://id.tmetric.com/images/tmetric_logo_and_text.svg" alt="">
+                <img src="https://i.ibb.co/FsZrrYs/Time-Metric.jpg" alt="">
                 <p>Create Your Account</p>
             </div>
-            <div id="body">
+            <form id="body">
+
                 <h4>Name</h4>
                 
-               <input type="text" placeholder="John Smith">
-               <h4>Email</h4>
-               <input type="email" placeholder="johnsmith@mail.com">
-               <h4>Password</h4>
-               <input type="password">
-               <br>
-               <button>Sign Up</button>
-               <br>
-               <input type="text" 
+                <input type="text" placeholder="John Smith" id="name" required>
+                <h4>Email</h4>
+                <input type="email" placeholder="johnsmith@mail.com" id="email" required>
+                <h4>Password</h4>
+                <input type="password" id="password" placeholder="Password" required>
+                <input type="password" id="passwordChk" placeholder="Reenter-Password" required>
+                <br>
+                
+                <input type="Submit" id="Signupbtn">
+                <br>
+                <div>
+                 
+                 <input type="text" id="google" 
+                    
                  placeholder=" Sign Up with Google">
+                </div>
+            </form>
+            
            
-            </div>
+                
+               
+            
+           
+           
 
         </div>
-         <div id="2">
+         <div id="img">
             <img src="https://id.tmetric.com/images/side_image_register.svg" alt="">
          </div>
     </div>
@@ -54,3 +114,27 @@
     
 </body>
 </html>
+<script>
+    let Signup=document.getElementById("body")
+    
+    Signup.addEventListener('submit',function(event){
+       
+        event.preventDefault();
+        let username = Signup.name.value;
+        let user = Signup.email.value;
+        let password = Signup.password.value;
+       
+        if(password != Signup.passwordChk.value){
+            alert('passwords do not match!');
+        }
+        else{
+            localStorage.setItem('user',user);
+            localStorage.setItem('username',username);
+            localStorage.setItem('password',password);
+            alert('Sign Up successful!');
+          
+            Signup.reset();
+            window.location.assign("Login.html")
+        }
+    })
+</script>

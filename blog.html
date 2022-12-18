@@ -73,11 +73,13 @@
             display: flex;
             gap: 20px;
         }
-        #Grid1>img{
+        #Gridbox>img{
            width: 300px;
            height: 400px;
         }
-        #Grid1{
+        #Gridbox{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
             width: 300px;
         }
         #Grid{
@@ -142,7 +144,7 @@
             </div>
           </div>
           <div id="Grid">
-               <div id="Grid1">
+               <div id="Gridbox">
                   <img src="https://blog.tmetric.com/content/images/size/w2000/2022/11/Tm_145_1160x664_2.png" alt="">
                    <p>PRODUCTIVITY HACKS</p>
                    <h3>

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Landing</title>
     <style>
         .con{
@@ -233,6 +235,60 @@
             width: 85%;
             margin: auto;
         }
+        .dropDown{
+            display: none;
+        }
+        
+        
+        .dropDown{
+            display: flex;
+            position: absolute;
+            width: 65%;
+            padding-left: 20px;
+            margin: auto;
+            background-color: white;
+            gap: 10px;
+            border-radius: 5px;
+          
+
+        }
+        .dropDown{
+            display: none;
+        }
+        .Why:hover .dropDown{
+            display: flex;
+            position: absolute;
+            width: 65%;
+            
+            margin: auto;
+            background-color: white;
+            gap: 10px;
+            color: #3070F0;
+          
+
+        }
+       
+        .Features>div img{
+            width: 30px;
+          padding: 5px 0px 0px 5px ;
+           margin-left: 5px;
+        }
+        
+        .div{
+            display: grid;
+          grid-template-columns: repeat(3,1fr);
+            width: 100%;
+            gap: 10px;
+        }
+        /* #Div{
+            width: 100px;
+            gap: 20px;
+        } */
+
+        
+
+       
+
       
         
     </style>
@@ -244,22 +300,78 @@
                 <img src="https://i.ibb.co/FsZrrYs/Time-Metric.jpg" alt="Time-Metric"  alt="">
             </div>
             <div id="second">
-                <div>
-                    <p>
-                        Why TMetric
-                    </p>
+                <div class="Why">
+                   <p>Why TMetric  <i class='fas fa-angle-down'></i></p> 
+                   
+                    <div class="dropDown">
+                        <div class="Overview">
+                            <h2>Overview</h2>
+                            <h4>Industries</h4>
+                            <p>Made for all industries. Check benefits of usage</p>
+                            <h4>Customers</h4>
+                            <p>See why business use TMetric for time tracking and workflow management</p>
+                        </div>
+                        <div class="Features">
+                            <h2>Features</h2>
+                            <div class="div">
+                                   <div id="Div">
+                                    <img src="https://tmetric.com/media/qojb5snq/icon-timer-gray.svg" alt=""><span> Time Tracking</span> 
+                                      <p>capture and control 
+                                       every task of your work
+                                      </p>   
+                                   </div>
+                                   <div id="Div">
+                                       <img src="https://tmetric.com/media/5r1l1s4g/icon-invoice-gray.svg" alt=""><span>Billing & Invoicing </span> 
+                                       <p>capture and control 
+                                         every task of your work
+                                     </p>     
+                                   </div>
+                                   <div id="Div">
+                                       <img src="https://tmetric.com/media/kqgpqtvh/icon-project-gray.svg" alt=""><span>Project Management</span> 
+                                     <p>capture and control 
+                                          every task of your work
+                                     </p>   
+                                    </div>
+                                    <div id="Div">
+                                        <img src="https://tmetric.com/media/isxcp2ip/icon-team-gray.svg" alt=""><span>Team Management</span> 
+                                        <p>capture and control 
+                                          every task of your work
+                                      </p>     
+                                    </div>
+                                    <div id="Div">
+                                        <img src="https://tmetric.com/media/g3jc0dsg/icon-reports-gray.svg" alt=""><span>task Management</span> 
+                                        <p>capture and control 
+                                          every task of your work
+                                      </p>     
+                                    </div>
+                                    <div id="Div">
+                                        <img src="https://tmetric.com/media/bxylkc2s/icon-time-off-gray.svg" alt=""><span>Time off</span> 
+                                        <p>capture and control 
+                                          every task of your work
+                                      </p>     
+                                    </div>
+
+                                    
+                                  
+                            </div>
+                           
+                        </div>
+                    </div>
                 </div>
-              
-                <p>
+                   
+                
+                
+               
+               <p>
                     Apps & Integration
                 </p>
-                <p>Pricing</p>
+                <p id="Pricing">Pricing</p>
                 <p>Support</p>
-                <p>Blog</p>
+                <p id="Blog">Blog</p>
             </div>
             <div id="third">
-                <h4>Login</h4>
-                <button>Sign Up</button>
+                <h4 id="Login">Login</h4>
+                <button id="Signup">Sign Up</button>
             </div>
 
         </div>
@@ -371,8 +483,8 @@
         <footer>
             <div>
                 <img src="https://cdn.icon-icons.com/icons2/285/PNG/96/social_facebook_box_blue_256_30649.png" alt="">
-                <img src="https://cdn.icon-icons.com/icons2/114/PNG/96/tweetdeck_twiiter_bird_19180.png" alt="">
-                <img src="https://cdn.icon-icons.com/icons2/2699/PNG/96/linkedin_logo_icon_170234.png" alt="">
+                <img src="https://cdn.icon-icons.com/icons2/114/PNG/96/tweetdeck_twiiter_bird_19180.png" alt="" id="twiiter">
+                <img src="https://cdn.icon-icons.com/icons2/2699/PNG/96/linkedin_logo_icon_170234.png" alt="" id="linkendin">
                 <img src="https://cdn.icon-icons.com/icons2/836/PNG/96/Youtube_icon-icons.com_66802.png" alt="">
             </div>
         </footer>
