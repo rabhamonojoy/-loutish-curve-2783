@@ -49,6 +49,110 @@
         #third>h4:hover{
             color: #3070F0;
         }
+        .team{
+            display: flex;
+            gap: 10px;
+            position: absolute;
+            margin-top: 10px;
+            height: 100px;
+            width: 100%;
+          
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        .team>p{
+            text-align: center;
+        }
+        .switch{
+            margin-top: 20px;
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            gap: 30px;
+          
+            height: 20px;
+        }
+        .slider{
+            position: absolute;
+           cursor: pointer;
+           top: 0;
+           left: 0;
+           right: 0;
+           bottom: 0;
+           background-color: green;
+           transition: 4s;
+           border-radius: 34px;
+        }
+        .switch input{
+            display: none;
+        }
+        .slider::before{
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 5px;
+            background-color: aliceblue;
+            transition: 0.4s;
+            border-radius: 100px;
+        }
+        input:checked+ .slider{
+            background-color: green;
+        }
+        input:checked+ .slider::before{
+            transform: translateX(20px);
+        }
+        .div{
+            border-left: 3px solid gray;
+            height: 50px;
+            margin-top: 10px;
+        }
+        .div+p{
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+        #range{
+            margin-bottom: 40px;
+        }
+        .size{
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+            height: 30px;
+            width: 50px;
+            margin-top: 20px;
+        }
+       
+        .Box{
+            width: 90%;
+            margin: auto;
+            margin-top: 150px;
+            position:relative;
+            display: flex;
+            justify-content: space-between;
+        }
+        .Business{
+            justify-content: center;
+            display: block;
+            width: 30%;
+            text-align: center;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        .Business>div:nth-child(2){
+            width: 160px;
+            margin-left: 110px;
+            height: 30px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        .Business>div:nth-child(3){
+            margin-top: 5px;
+            margin-left: 115px;
+            width: 160px;
+            width: 150px;
+            height: 30px;
+            background-color: #C8F1DF;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
     </style>
 </head>
 <body>
@@ -83,9 +187,70 @@
     </div>
     <div class="body">
         <div class="team">
-            <input type="range" name="" id="">
+            <p>Montly</p>
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider"></span>
+            </label>
+            <p>Anunualy</p>
+            <div class="div"></div>
+            <p>Team Size</p>
+            <div class="size">1</div>
+            <input type="range" name="" id="range">
+            
         </div>
+
     </div>
+    <div class="Box">
+        <div class="Business">
+          <h2>Business</h2>
+          <div>$ 980/month</div>
+          <div>You save $420/month</div>
+          <h4>Everything in Professional, plus:</h4>
+          <p>Apps and sites usage reports</p>
+          <p>Screenshots capturing</p>
+          <p>Payroll for employees</p>
+          <p>Time-sync with Jira and QuickBooks</p>
+          <p>Time Off Calendar</p>
+          <p>Work Schedule</p>
+          <p>Team Dashboard</p>
+
+        </div>
+        <div class="Business">
+            <h2>Professional</h2>
+            <div>$ 700/month</div>
+            <div>You save $300/month</div>
+            <h4>Everything in Professional, plus:</h4>
+            <p>Apps and sites usage reports</p>
+            <p>Screenshots capturing</p>
+            <p>Payroll for employees</p>
+            <p>Time-sync with Jira and QuickBooks</p>
+            <p>Time Off Calendar</p>
+            <p>Work Schedule</p>
+            <p>Team Dashboard</p>
+  
+          </div>
+          <div class="Business">
+            <h2>Free</h2>
+            <div>$ 0/month</div>
+           
+            <h4>Everything in Professional, plus:</h4>
+            <p>Apps and sites usage reports</p>
+            <p>Screenshots capturing</p>
+            <p>Payroll for employees</p>
+            <p>Time-sync with Jira and QuickBooks</p>
+            <p>Time Off Calendar</p>
+            <p>Work Schedule</p>
+            <p>Team Dashboard</p>
+  
+          </div>
+          
+
+
+    </div>
+    
+
+    
    
     
 </body>
